@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 # By Amoakoh Benjamin
-""""Define a Rectangle class."""
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
     """Represent a rectangle.
     Attributes:
-    number_of_instances (int): The number of Rectangle instances.
+        number_of_instances (int): The number of Rectangle instances.
         print_symbol (any): The symbol used for string representation.
     """
 
@@ -14,7 +14,7 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle
+        """Initialize a new Rectangle.
         Args:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
@@ -25,7 +25,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get/set the witdth of the Rectangle."""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -47,11 +47,11 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__ height = value
+        self.__height = value
 
     def area(self):
         """Return the area of the Rectangle."""
-        return (self.width * self__height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """Return the perimeter of the Rectangle."""

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
-"""Define a Rectangle class."""
+# By Amoakoh Benjamin
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
@@ -9,10 +9,9 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
         Args:
-            width (int): The width of the rectangle.
-            height (int): the height of the new rectangle.
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
         """
-
         self.width = width
         self.height = height
 
@@ -23,8 +22,8 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        if not isinstance(self, int):
-            raise TypeError("width must be an interger")
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
@@ -44,11 +43,11 @@ class Rectangle:
 
     def area(self):
         """Return the area of the Rectangle."""
-        return (self.__width * self.__ height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
-        if self.__width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
@@ -62,12 +61,12 @@ class Rectangle:
         rect = []
         for i in range(self.__height):
             [rect.append('#') for j in range(self.__width)]
-            if i != self.height - 1:
-                rect.append('\n')
+            if i != self.__height - 1:
+                rect.append("\n")
         return ("".join(rect))
 
     def __repr__(self):
-        """Return the sring representation of the Rectangle."""
+        """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
