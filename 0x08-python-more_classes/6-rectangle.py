@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# written By Amoakoh Benjamin
+# By Amoakoh Benjamin
 """Defines a Rectangle class."""
 
 
@@ -81,3 +81,4 @@ class Rectangle:
         """Print a message for every deletion of a Rectangle."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
+        
